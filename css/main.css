@@ -1,5 +1,7 @@
-.hide {
-  display: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -9,7 +11,14 @@ body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   text-align: center;
-  background-color: #c3c3c3;
+  background: linear-gradient(135deg, #1c1c1c, #424242); /* Sleek dark gradient background */
+  color: #f5f5f5; /* Light text on dark background */
+  min-height: 100vh; /* Full viewport height */
+  align-items: center;
+}
+
+.hide {
+  display: none;
 }
 
 .main {
@@ -19,45 +28,59 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.05); /* Transparent glass effect */
+  border-radius: 15px; /* Slightly rounded corners */
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 h1 {
   width: 100%;
   text-align: center;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: #f5f5f5; /* Bright contrast text */
+  text-transform: uppercase;
+  margin-bottom: 1em;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  border-radius: 15px; /* Rounded corners for images */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow around images */
 }
 
 button {
   margin: 1.5em auto;
-  padding: 20px;
-  border-radius: 40px;
-  background-color: #424242;
+  padding: 15px 40px;
+  border-radius: 50px;
+  background-color: #ff6b6b; /* Bright modern color */
   color: #fff;
   border: none;
   font-size: 16px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s, transform 0.2s; /* Smooth transition effects */
+  box-shadow: 0px 4px 12px rgba(255, 107, 107, 0.4); /* Button shadow for effect */
 }
 
 button:hover {
-  margin: 1.5em auto;
-  padding: 20px;
-  border-radius: 40px;
-  background-color: rgb(44, 77, 179);
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  font-family: "Montserrat";
-  font-weight: bold;
+  background-color: #ff8a8a; /* Slight color shift on hover */
+  transform: translateY(-3px); /* Button lift on hover */
   cursor: pointer;
+}
+
+button:active {
+  background-color: #ff4d4d; /* Darken color on active state */
+  transform: translateY(1px); /* Slight press down effect */
 }
 
 figure {
   max-width: 1000px;
   margin: 0 auto;
+  border-radius: 15px; /* Smooth rounded edges */
+  overflow: hidden; /* Ensures image or content stays inside rounded corners */
 }
